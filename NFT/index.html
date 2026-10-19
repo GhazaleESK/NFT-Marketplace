@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
-  <body class="bg-black">
+  <body class="bg-white selection:bg-purple-600 selection:text-white">
     <header
       class="sticky top-0 z-50 h-14 py-4 px-8 bg-[#2B2B2B] flex justify-between text-white lg:h-25 lg:items-center"
     >
@@ -17,17 +17,25 @@
       </div>
       <div>
         <div class="hidden lg:flex gap-6 items-center">
-          <a href="#marketplace" class="cursor-pointer hover:text-purple-600"
+          <a
+            href="#marketplace"
+            class="cursor-pointer hover:text-purple-600 duration-300"
             >Marketplace</a
           >
-          <a href="#rankings" class="cursor-pointer hover:text-purple-600"
+          <a
+            href="#rankings"
+            class="cursor-pointer hover:text-purple-600 duration-300"
             >Rankings</a
           >
-          <a href="#wallet" class="cursor-pointer hover:text-purple-600"
+          <a
+            href="#wallet"
+            class="cursor-pointer hover:text-purple-600 duration-300"
             >Connect a wallet
           </a>
-          <div class="flex p-3 bg-purple-600 rounded-2xl cursor-pointer">
-            <a href="../login/index.html" class="flex gap-1 items-center j">
+          <div
+            class="flex p-3 bg-purple-600 rounded-2xl hover:bg-purple-900 duration-300"
+          >
+            <a href="../login/index.html" class="flex gap-1 items-center">
               <img src="assets/icons/User.svg" alt="User" class="w-4 h-4" />
 
               <p>Sign Up</p></a
@@ -40,23 +48,33 @@
           aria-label="open navigation menu "
           aria-expanded="false"
           aria-controls="mobile-menu"
-          class="lg:hidden hover:pointer"
+          class="lg:hidden"
         >
-          <img src="assets/icons/Burger-Menu.svg" alt="Burger-Menu" />
+          <img
+            src="assets/icons/Burger-Menu.svg"
+            alt="Burger-Menu"
+            class="cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
+          />
         </button>
         <nav
           id="mobile-menu"
-          class="hidden absolute top-full left-0 w-full bg-[#2B2B2B] p-6 flex-col gap-6 z-50 lg:hidden"
+          class="hidden absolute top-full right-0 w-1/2 md:w-1/3 h-screen bg-[#2B2B2B] p-6 flex-col gap-6 z-50 lg:hidden"
         >
-          <a href="#marketplace" class="hover:text-purple-600"> Marketplace </a>
+          <a href="#marketplace" class="hover:text-purple-600 duration-300">
+            Marketplace
+          </a>
 
-          <a href="#rankings" class="hover:text-purple-600"> Rankings </a>
+          <a href="#rankings" class="hover:text-purple-600 duration-300">
+            Rankings
+          </a>
 
-          <a href="#wallet" class="hover:text-purple-600"> Connect a wallet </a>
+          <a href="#wallet" class="hover:text-purple-600 duration-300">
+            Connect a wallet
+          </a>
 
           <a
             href="../login/index.html"
-            class="rounded-2xl bg-purple-600 p-3 text-center"
+            class="rounded-2xl bg-purple-600 p-3 text-center hover:bg-purple-900 w-full duration-300"
           >
             Sign Up
           </a>
@@ -64,10 +82,10 @@
       </div>
     </header>
     <main
-      class="flex flex-col w-fuul items-center text-white pt-5 bg-[#2B2B2B] md:justify-center lg:px-45 md:min-h-screen"
+      class="flex flex-col w-full items-center text-white pt-5 bg-[#2B2B2B] md:justify-center md:min-h-[calc(100dvh-100px)]"
     >
       <div
-        class="grid grid-cols-1 self-center py-10 md:grid-cols-2 items-center text-white bg-[#2B2B2B] md:gap-10 lg:w-full md:items-start md:justify-between md:w-170 lg:py-20"
+        class="grid grid-cols-1 self-center py-10 md:grid-cols-2 items-center text-white bg-[#2B2B2B] md:gap-10 lg:w-full md:items-start md:justify-between md:w-170 lg:py-20 lg:px-45"
       >
         <div
           class="flex flex-col w-79 gap-10 md:gap-4 md:w-full md:items-start lg:w-full lg:h-full lg:justify-between lg:gap-8"
@@ -104,7 +122,7 @@
             </div>
           </div>
           <button
-            class="flex px-12.5 py-4 md:py-3 md:px-8 bg-purple-600 gap-2 justify-center items-center font-semibold rounded-3xl cursor-pointer md:rounded-2xl lg:py-4 lg:px-12"
+            class="flex px-12.5 py-4 md:py-3 md:px-8 bg-purple-600 gap-2 justify-center items-center font-semibold rounded-3xl cursor-pointer md:rounded-3xl lg:py-4 lg:px-12 hover:bg-purple-900 duration-300"
           >
             <img
               src="assets/icons/RocketLaunch.svg"
@@ -152,7 +170,7 @@
       </div>
       <div
         id="marketplace"
-        class="py-10 flex flex-col gap-10 md:w-170 lg:w-full lg:py-20"
+        class="py-10 flex flex-col gap-10 md:w-170 lg:w-full lg:py-20 lg:px-45"
       >
         <div class="flex flex-col gap-3 w-79 md:w-full lg:gap-5">
           <h2 class="font-semibold text-2xl lg:text-4xl">
@@ -276,7 +294,7 @@
       </div>
       <div
         id="rankings"
-        class="flex flex-col gap-10 py-10 md:w-170 lg:py-20 lg:w-full"
+        class="flex flex-col gap-10 py-10 md:w-170 lg:py-20 lg:w-full lg:px-45"
       >
         <div class="flex md:grid md:grid-cols-2">
           <div class="flex flex-col gap-3 w-79 lg:w-full lg:gap-5">
@@ -286,7 +304,7 @@
             </p>
           </div>
           <button
-            class="hidden md:block md:flex px-12.5 py-2 border-3 border-purple-600 rounded-2xl items-center justify-center md:justify-self-end md:self-end gap-3 cursor-pointer md:w-62 md:h-15"
+            class="hidden md:block md:flex px-12.5 py-2 border-3 border-purple-600 rounded-3xl items-center justify-center md:justify-self-end md:self-end gap-3 cursor-pointer md:w-62 md:h-15 hover:border-0 hover:bg-purple-100 hover:text-purple-600 duration-300"
           >
             <img
               src="assets/icons/RocketLaunch (1).svg"
@@ -296,11 +314,11 @@
         </div>
         <div
           id="creators-container"
-          class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-5"
+          class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
         ></div>
 
         <button
-          class="flex px-12 py-5 border-3 border-purple-600 rounded-3xl items-center justify-center gap-3 cursor-pointer md:hidden"
+          class="flex px-12 py-5 border-3 border-purple-600 rounded-3xl items-center justify-center gap-3 cursor-pointer md:hidden hover:border-0 hover:bg-purple-100 hover:text-purple-600 duration-300"
         >
           <img
             src="assets/icons/RocketLaunch (1).svg"
@@ -309,7 +327,7 @@
         </button>
       </div>
       <div
-        class="flex flex-col py-10 w-79 gap-5 md:w-170 lg:w-full lg:py-20 lg:gap-10"
+        class="flex flex-col py-10 w-79 gap-5 md:w-170 lg:w-full lg:py-20 lg:gap-10 lg:px-45"
       >
         <h2 class="font-semibold text-3xl lg:text-4xl">Browse Categories</h2>
 
@@ -319,7 +337,7 @@
         ></div>
       </div>
       <div
-        class="flex flex-col py-10 w-79 gap-10 md:w-170 md:items-between md:pb-20 lg:w-full lg:justify-between lg:py-20 lg:h-screen"
+        class="flex flex-col py-10 w-79 gap-10 md:w-170 md:items-between md:pb-20 lg:w-full lg:justify-between lg:py-20 lg:h-screen lg:px-45"
       >
         <div class="grid md:grid-cols-2">
           <div class="flex flex-col gap-3 lg:gap-5">
@@ -329,7 +347,7 @@
             <p class="lg:text-xl">Explore new trending NFTs</p>
           </div>
           <button
-            class="hidden md:block md:flex px-12 py-4 border-3 border-purple-600 rounded-3xl items-center justify-center gap-3 cursor-pointer w-47 h-15 md:justify-self-end md:self-end"
+            class="hidden md:block md:flex px-12 py-4 border-3 border-purple-600 rounded-3xl items-center justify-center gap-3 cursor-pointer w-47 h-15 md:justify-self-end md:self-end hover:border-0 hover:bg-purple-100 hover:text-purple-600 duration-300"
           >
             <img src="assets/icons/Eye.svg" alt="Eye" /><span
               class="font-semibold"
@@ -342,7 +360,7 @@
           class="grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
         ></div>
         <button
-          class="flex px-12 py-4 border-3 border-purple-600 rounded-3xl items-center justify-center gap-3 cursor-pointer md:hidden"
+          class="flex px-12 py-4 border-3 border-purple-600 rounded-3xl items-center justify-center gap-3 cursor-pointer md:hidden hover:border-0 hover:bg-purple-100 hover:text-purple-600 duration-300"
         >
           <img src="assets/icons/Eye.svg" alt="Eye" /><span
             class="font-semibold"
@@ -351,7 +369,7 @@
         </button>
       </div>
       <div
-        class="flex w-full h-screen bg-[url('assets/images/mushroom.png')] bg-cover bg-center justify-center py-10 items-end relative md:py-15 lg:w-screen lg:h-screen lg:px-45"
+        class="flex w-full min-h-[calc(100dvh-100px)] bg-[url('assets/images/mushroom.png')] bg-cover bg-center justify-center py-10 items-end relative md:py-15 lg:px-45"
       >
         <div
           class="absolute inset-0 bg-linear-to-t from-[#A259FF] from-0% via-[#A259FF]/40 via-60% to-transparent to-100%"
@@ -400,10 +418,10 @@
               </div>
             </div>
             <button
-              class="flex items-center justify-center gap-3 bg-white w-full py-5 px-13 rounded-3xl cursor-pointer md:w-45 md:h-14 md:px-8 md:py-3"
+              class="flex items-center justify-center gap-3 bg-white text-black w-full py-5 px-13 rounded-3xl cursor-pointer md:w-45 md:h-14 md:px-8 md:py-3 hover:bg-[#3B3B3B] hover:text-white duration-300"
             >
               <img src="assets/icons/Eye.svg" alt="Eye" class="-mb-1" />
-              <span class="font-semibold text-black">See NFT</span>
+              <span class="font-semibold">See NFT</span>
             </button>
           </div>
           <div
@@ -430,7 +448,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col w-79 py-10 gap-10 md:w-170 lg:w-full lg:h-screen lg:py-20"
+        class="flex flex-col w-79 py-10 gap-10 md:w-170 lg:w-full lg:h-screen lg:py-20 lg:px-45"
       >
         <div class="flex flex-col gap-3 lg:gap-5">
           <h2 class="font-semibold text-2xl lg:text-4xl">How it works</h2>
@@ -487,9 +505,9 @@
           </div>
         </div>
       </div>
-      <div class="flex md:pt-10 md:pb-20 lg:w-full">
+      <div class="flex md:pt-10 md:pb-20 lg:w-full lg:px-45">
         <div
-          class="grid py-10 w-79 md:gap-8 md:grid-cols-2 md:w-170 md:py-10 md:px-7 md:bg-[#3B3B3B] md:rounded-3xl lg:w-full lg:gap-30 lg:py-15 lg:px-20"
+          class="grid py-10 w-79 gap-8 md:grid-cols-2 md:w-170 md:py-10 md:px-7 md:bg-[#3B3B3B] md:rounded-3xl lg:w-full lg:gap-30 lg:py-15 lg:px-20"
         >
           <img
             src="assets/images/astronaut-reading.png"
@@ -497,7 +515,7 @@
             class="h-64 w-full rounded-3xl object-cover md:h-70 lg:h-80"
           />
           <div
-            class="flex flex-col md:gap-10 md:justify-between lg:justify-center"
+            class="flex flex-col gap-10 md:justify-between lg:justify-center"
           >
             <div class="flex flex-col gap-3 lg:gap-5">
               <h2 class="font-semibold text-2xl w-60 lg:text-4xl">
@@ -509,12 +527,16 @@
             </div>
             <div class="flex flex-col gap-4 lg:hidden">
               <input
+                id="email"
+                name="email"
                 type="email"
-                class="py-3 px-5 bg-white w-full rounded-4xl text-black"
-                placeholder="Enter Your Email Address"
+                required
+                autocomplete="email"
+                class="min-w-0 flex-1 text-black outline-none px-4 py-3 bg-white rounded-3xl"
+                placeholder="Enter your email here"
               />
               <button
-                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer"
+                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer hover:bg-purple-900 duration-300"
               >
                 <img
                   src="assets/icons/EnvelopeSimple.svg"
@@ -523,7 +545,7 @@
               </button>
             </div>
             <div
-              class="hidden lg:block lg:flex flex-col gap-4 md:bg-white md:flex-row md:w-105 md:rounded-2xl md:gap-0"
+              class="hidden lg:block lg:flex flex-col gap-4 md:bg-white md:flex-row md:rounded-2xl md:rounded-r-3xl md:gap-0"
             >
               <input
                 type="email"
@@ -531,7 +553,7 @@
                 placeholder="Enter Your Email Address "
               />
               <button
-                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer md:w-45 md:right-0 md:py-4 md:rounded-2xl cursor-pointer"
+                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer md:px-1 md:right-0 md:py-4 md:rounded-2xl hover:bg-purple-900 duration-300"
               >
                 <img src="assets/icons/EnvelopeSimple.svg" alt="" /><span
                   class="font-semibold"
@@ -556,16 +578,24 @@
             <div class="flex flex-col gap-3 text-[#CCCCCC]">
               <span>Join our community</span>
               <div class="flex gap-3">
-                <a href="#" class="hover:text-purple-600"
+                <a
+                  href="#"
+                  class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                   ><img src="assets/icons/DiscordLogo.svg" alt="DiscordLogo"
                 /></a>
-                <a href="#" class="hover:text-purple-600"
+                <a
+                  href="#"
+                  class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                   ><img src="assets/icons/YoutubeLogo.svg" alt="YoutubeLogo"
                 /></a>
-                <a href="#" class="hover:text-purple-600"
+                <a
+                  href="#"
+                  class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                   ><img src="assets/icons/TwitterLogo.svg" alt="TwitterLogo"
                 /></a>
-                <a href="#" class="hover:text-purple-600"
+                <a
+                  href="#"
+                  class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                   ><img
                     src="assets/icons/InstagramLogo.svg"
                     alt="InstagramLogo"
@@ -573,17 +603,23 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-7 lg:justify-start">
             <span class="font-bold text-xl text-white">Explore</span>
             <div class="flex flex-col text-[#cccccc] gap-5">
-              <a href="#marketplace" class="hover:text-purple-600"
+              <a href="#marketplace" class="hover:text-purple-600 duration-300"
                 >Marketplace</a
               >
-              <a href="#rankings" class="hover:text-purple-600">Rankings</a>
-              <a href="#" class="hover:text-purple-600">Connect a wallet</a>
+              <a href="#rankings" class="hover:text-purple-600 duration-300"
+                >Rankings</a
+              >
+              <a href="#" class="hover:text-purple-600 duration-300"
+                >Connect a wallet</a
+              >
             </div>
           </div>
-          <div class="flex flex-col gap-5 lg:justify-between">
+          <div
+            class="flex flex-col gap-5 lg:justify-between lg:justify-self-end"
+          >
             <span class="font-bold text-xl text-white"
               >Join our weekly digest</span
             >
@@ -591,15 +627,19 @@
               Get exclusive promotions & updates straight to your inbox.
             </p>
             <div
-              class="flex flex-col gap-4 md:bg-white md:flex-row md:w-105 md:rounded-2xl md:gap-0 lg:w-95"
+              class="flex flex-col gap-4 md:bg-white md:flex-row md:w-105 md:rounded-2xl md:rounded-r-3xl md:gap-0 lg:w-95"
             >
               <input
+                id="email"
+                name="email"
                 type="email"
-                class="py-3 px-5 bg-white w-full rounded-4xl text-[#2B2B2B] md:rounded-2xl md:py-4"
-                placeholder="Enter Your Email Address "
+                required
+                autocomplete="email"
+                class="min-w-0 flex-1 text-black outline-none px-4 px-4 py-3 bg-white rounded-3xl"
+                placeholder="Enter your email here"
               />
               <button
-                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer md:w-45 md:right-0 md:py-4 md:rounded-2xl cursor-pointer"
+                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer md:w-45 md:right-0 md:py-4 md:rounded-2xl hover:bg-purple-900 duration-300"
               >
                 <img src="assets/icons/EnvelopeSimple.svg" alt="" /><span
                   class="font-semibold text-white"
@@ -621,7 +661,7 @@
       id="back-to-top"
       type="button"
       aria-label="Back to top"
-      class="hidden fixed bottom-6 right-6 z-50 rounded-full bg-purple-600 p-4 text-white shadow-lg hover:bg-purple-700 cursor-pointer"
+      class="hidden fixed bottom-6 right-6 z-50 rounded-full bg-purple-600 p-4 text-white shadow-lg hover:bg-purple-700 cursor-pointer duration-300"
     >
       top
     </button>

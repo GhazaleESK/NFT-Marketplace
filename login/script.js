@@ -1,5 +1,17 @@
 "use strict";
 
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  const isHidden = mobileMenu.classList.contains("hidden");
+
+  mobileMenu.classList.toggle("hidden");
+  mobileMenu.classList.toggle("flex");
+
+  menuToggle.setAttribute("aria-expanded", String(isHidden));
+});
+
 const signupForm = document.getElementById("signup-form");
 
 const usernameInput = document.getElementById("username");

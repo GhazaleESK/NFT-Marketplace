@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
-  <body class="bg-neutral-800">
+  <body class="bg-[#2B2B2B] selection:bg-purple-600 selection:text-white">
     <header
-      class="h-14 py-4 px-8 bg-[#2B2B2B] flex justify-between text-white lg:h-25 lg:items-center"
+      class="sticky top-0 z-50 py-4 px-8 bg-[#2B2B2B] flex justify-between text-white lg:h-25 lg:items-center"
     >
       <div class="flex items-center gap-2">
         <img src="assets/icons/Storefront.svg" alt="Storefront class " />
@@ -17,35 +17,81 @@
       </div>
       <div>
         <div class="hidden lg:flex gap-6 items-center">
-          <a href="#" class="cursor-pointer">Marketplace</a>
-          <a href="#" class="cursor-pointer">Rankings</a>
-          <a href="#" class="cursor-pointer">Connect a wallet </a>
-          <button class="flex p-3 bg-purple-600 rounded-2xl cursor-pointer">
+          <a href="#" class="cursor-pointer hover:text-purple-600 duration-300"
+            >Marketplace</a
+          >
+          <a href="#" class="cursor-pointer hover:text-purple-600 duration-300"
+            >Rankings</a
+          >
+          <a href="#" class="cursor-pointer hover:text-purple-600 duration-300"
+            >Connect a wallet
+          </a>
+          <div
+            class="flex p-3 bg-purple-600 rounded-2xl cursor-pointer hover:bg-purple-900 duration-300"
+          >
             <a href="../login/index.html" class="flex gap-1 items-center j">
               <img src="assets/icons/User.svg" alt="User" class="w-4 h-4" />
 
               <p>Sign Up</p></a
             >
-          </button>
+          </div>
         </div>
-        <button class="lg:hidden hover:pointer">
-          <img src="assets/icons/Burger-Menu.svg" alt="Burger-Menu" />
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="open navigation menu "
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="lg:hidden hover:pointer"
+        >
+          <img
+            src="assets/icons/Burger-Menu.svg"
+            alt="Burger-Menu"
+            class="cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
+          />
         </button>
+        <nav
+          id="mobile-menu"
+          class="hidden absolute top-full right-0 w-1/2 md:w-1/3 bg-[#2B2B2B] p-5 flex-col gap-6 z-50 h-screen lg:hidden"
+        >
+          <a
+            href="#marketplace"
+            class="hover:text-purple-600 duration-300 ml-2"
+          >
+            Marketplace
+          </a>
+
+          <a href="#rankings" class="hover:text-purple-600 duration-300 ml-2">
+            Rankings
+          </a>
+
+          <a href="#wallet" class="hover:text-purple-600 duration-300 ml-2">
+            Connect a wallet
+          </a>
+
+          <a
+            href="../login/index.html"
+            class="rounded-2xl bg-purple-600 p-3 text-center hover:bg-purple-900 duration-300"
+          >
+            Sign Up
+          </a>
+        </nav>
       </div>
     </header>
     <main>
       <article
-        class="grid justify-items-center md:grid-cols-2 text-white md:h-screen lg:items-start lg:gap-30"
+        class="grid justify-items-center md:grid-cols-2 text-white lg:items-start"
       >
         <img
-          class="h-60 w-screen md:h-screen object-cover"
+          class="h-60 w-screen md:w-full md:min-h-[calc(100dvh-64px)] lg:min-h-[calc(100dvh-100px)] object-cover"
           src="assets/images/Image-Placeholder.png"
           alt="Image-Placeholder"
         />
+
         <div
-          class="w-82 flex flex-col items-center lg:content-start gap-10 md:h-screen pt-8 pb-10 md:justify-evenly md:justify-around md:w-full lg:items-start"
+          class="w-82 flex flex-col items-center lg:content-start gap-7 md:min-h-[calc(100dvh-64px)] lg:min-h-[calc(100dvh-100px)] pt-8 pb-10 md:justify-evenly md:justify-around md:w-full md:items-center lg:items-start lg:px-30"
         >
-          <div class="flex flex-col gap-5 md:gap-10">
+          <div class="flex flex-col gap-5">
             <h1 class="text-4xl font-semibold lg:text-6xl">Create account</h1>
             <p class="lg:leading-10 md:w-80 lg:text-xl lg:w-115">
               Welcome! enter your details and start creating, collecting and
@@ -113,7 +159,7 @@
             ></p>
             <button
               type="submit"
-              class="bg-purple-600 rounded-4xl py-3 px-5 font-semibold mt-5 cursor-pointer"
+              class="bg-purple-600 rounded-4xl py-3 px-5 font-semibold cursor-pointer hover:bg-purple-900 duration-300"
             >
               Create account
             </button>
@@ -122,7 +168,7 @@
       </article>
     </main>
 
-    <footer class="flex w-full py-10 bg-[#3B3B3B] justify-center lg:w-screen">
+    <footer class="flex w-full py-10 bg-[#3B3B3B] justify-center">
       <div
         class="flex flex-col w-79 gap-8 bg-[#3B3B3B] md:w-180 lg:w-full lg:px-45"
       >
@@ -136,29 +182,45 @@
               <span>Join our community</span>
               <div class="flex gap-3">
                 <a href="#"
-                  ><img src="assets/icons/DiscordLogo.svg" alt="DiscordLogo"
+                  ><img
+                    src="assets/icons/DiscordLogo.svg"
+                    alt="DiscordLogo"
+                    class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                 /></a>
                 <a href="#"
-                  ><img src="assets/icons/YoutubeLogo.svg" alt="YoutubeLogo"
+                  ><img
+                    src="assets/icons/YoutubeLogo.svg"
+                    alt="YoutubeLogo"
+                    class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                 /></a>
                 <a href="#"
-                  ><img src="assets/icons/TwitterLogo.svg" alt="TwitterLogo"
+                  ><img
+                    src="assets/icons/TwitterLogo.svg"
+                    alt="TwitterLogo"
+                    class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                 /></a>
                 <a href="#"
                   ><img
                     src="assets/icons/InstagramLogo.svg"
                     alt="InstagramLogo"
+                    class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                 /></a>
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-7">
             <span class="font-bold text-xl text-white">Explore</span>
-            <div class="flex flex-col text-[#cccccc] gap-5">
-              <a href="#" class="hover:text-purple-600">Marketplace</a>
-              <a href="#">Rankings</a>
-              <a href="#">Connect a wallet</a>
-            </div>
+            <nav class="flex flex-col text-[#cccccc] gap-5 lg:content-center">
+              <a href="#" class="hover:text-purple-600 duration-300"
+                >Marketplace</a
+              >
+              <a href="#" class="hover:text-purple-600 duration-300"
+                >Rankings</a
+              >
+              <a href="#" class="hover:text-purple-600 duration-300"
+                >Connect a wallet</a
+              >
+            </nav>
           </div>
           <div class="flex flex-col gap-5 lg:justify-between">
             <span class="font-bold text-xl text-white"
@@ -168,15 +230,19 @@
               Get exclusive promotions & updates straight to your inbox.
             </p>
             <div
-              class="flex flex-col gap-4 md:bg-white md:flex-row md:w-105 md:rounded-2xl md:gap-0 lg:w-95"
+              class="flex flex-col gap-4 md:bg-white md:flex-row md:w-105 md:rounded-2xl md:rounded-r-3xl md:gap-0 lg:w-95"
             >
               <input
+                id="email"
+                name="email"
                 type="email"
-                class="py-3 px-5 bg-white w-full rounded-4xl text-[#2B2B2B] md:rounded-2xl md:py-4"
-                placeholder="Enter Your Email Address "
+                required
+                autocomplete="email"
+                class="min-w-0 flex-1 text-black outline-none px-4 bg-white rounded-4xl py-3"
+                placeholder="Enter your email here"
               />
               <button
-                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer md:w-45 md:right-0 md:py-4 md:rounded-2xl cursor-pointer"
+                class="flex itemd-center w-full justify-center gap-3 bg-[#A259FF] px-13 py-3 rounded-4xl cursor-pointer md:w-45 md:right-0 md:py-4 md:rounded-2xl hover:bg-purple-900 duration-300"
               >
                 <img src="assets/icons/EnvelopeSimple.svg" alt="" />
                 <span class="font-semibold text-white">Subscribe</span>

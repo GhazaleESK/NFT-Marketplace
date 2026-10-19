@@ -117,7 +117,7 @@ async function renderCreators() {
       const card = document.createElement("div");
 
       card.className =
-        "relative grid w-full grid-cols-[1fr_2fr] items-center rounded-2xl bg-[#3B3B3B] px-6 py-4 lg:h-60 lg:w-60 lg:grid-cols-1 lg:justify-items-center";
+        "relative grid w-full grid-cols-[1fr_2fr] items-center rounded-2xl bg-[#3B3B3B] px-6 py-4 lg:h-67  lg:grid-cols-1 lg:justify-items-center";
 
       if (index >= 5) {
         card.classList.add("hidden", "lg:grid");
@@ -137,7 +137,7 @@ async function renderCreators() {
       const rank = document.createElement("div");
 
       rank.className =
-        "absolute left-4.5 top-3 flex h-6 w-6 items-center justify-center rounded-full bg-[#2B2B2B] pb-0.5 pr-0.5 text-[#858584] lg:top-4.5";
+        "absolute left-4.5 top-3 flex h-6 w-6 items-center justify-center rounded-full bg-[#2B2B2B] text-[#858584] lg:top-4.5";
 
       rank.textContent = index + 1;
 
